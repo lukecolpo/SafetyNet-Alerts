@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class DataLoader {
 
 	// Load data from JSON files
-	public AllData LoadData() {
+	public static AllData loadData() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();		
 			List<FireStation> fireStations = Arrays.asList(mapper.readValue(Paths.get("./src/main/resources/data/FireStations.json").toFile(), FireStation[].class));
