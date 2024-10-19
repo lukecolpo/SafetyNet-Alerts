@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 import com.example.SafetyNet_Alerts.domain.AllData;
-import com.example.SafetyNet_Alerts.init.DataLoader;
+import com.example.SafetyNet_Alerts.utilities.DataLoader;
 
 
 

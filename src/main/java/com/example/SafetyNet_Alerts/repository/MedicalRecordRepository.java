@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.SafetyNet_Alerts.domain.AllData;
 import com.example.SafetyNet_Alerts.domain.MedicalRecord;
-import com.example.SafetyNet_Alerts.init.DataLoader;
+import com.example.SafetyNet_Alerts.utilities.DataLoader;
 
 @Repository
 public class MedicalRecordRepository {

@@ -1,4 +1,4 @@
-package com.example.SafetyNet_Alerts.init;
+package com.example.SafetyNet_Alerts.utilities;
 
 import java.nio.file.Paths;
 import java.util.Arrays;
