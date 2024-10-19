@@ -1,7 +1,5 @@
 package com.example.SafetyNet_Alerts;
 
-import java.io.IOException;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -20,9 +18,9 @@ public class SafetyNetAlertsApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(SafetyNetAlertsApplication.class, args);
 	}
-	
-	@Bean
-	AllData init() throws IOException {
+
+    @Bean
+    AllData init() {
 		return DataLoader.loadData();
 	}
 }
