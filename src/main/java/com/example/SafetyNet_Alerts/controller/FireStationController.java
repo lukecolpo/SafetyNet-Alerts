@@ -1,5 +1,6 @@
 package com.example.SafetyNet_Alerts.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -44,10 +45,13 @@ public class FireStationController {
 	public List<Person> getPeopleByStationNumber(@RequestParam String stationNumber) {
 		
 		logger.info("GET /firestation " + stationNumber+" called");
-		FireStation fireStation = fireStationService.findFireStationByStationNumber(stationNumber);
-		String address = fireStation.getAddress();
+		List<FireStation> fireStations = fireStationService.findFireStationByStationNumber(stationNumber);
+		List<Person> people = new ArrayList<>();
 		
-		List<Person> people = personService.findPersonByAddress(address);
+		for (FireStation fireStation : fireStations) {
+			String address = fireStation.getAddress();
+			people.addAll(personService.findPersonByAddress(address));
+		}
 		return people;
 	}
 

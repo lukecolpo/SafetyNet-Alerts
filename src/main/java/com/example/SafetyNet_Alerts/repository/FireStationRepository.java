@@ -1,5 +1,6 @@
 package com.example.SafetyNet_Alerts.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -39,12 +40,13 @@ public class FireStationRepository {
 		return null;
 	}
 	
-	public FireStation findByStation(String station) {
+	public List<FireStation> findByStation(String station) {
+		List<FireStation> stationNumberFireStations = new ArrayList<>();
 		for (FireStation fireStation : fireStations) {
 			if(fireStation.getStation().equals(station)) {
-				return fireStation;
+				stationNumberFireStations.add(fireStation);
 			}
 		}
-		return null;
+		return stationNumberFireStations;
 	}
 }

@@ -39,7 +39,7 @@ public class FireStationService {
 	}
 	
 	// Find FireStation by stationNumber
-	public FireStation findFireStationByStationNumber(String stationNumber) {
+	public List<FireStation> findFireStationByStationNumber(String stationNumber) {
 		return fireStationRepository.findByStation(stationNumber);
 	}
 	
