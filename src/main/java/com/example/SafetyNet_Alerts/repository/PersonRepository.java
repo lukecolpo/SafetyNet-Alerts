@@ -1,5 +1,6 @@
 package com.example.SafetyNet_Alerts.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -25,13 +26,14 @@ public class PersonRepository {
 		return people;
 	}
 	
-	public Person findByAddress(String address) {
+	public List<Person> findByAddress(String address) {
+		List<Person> addressPeople = new ArrayList<>();
 		for (Person person : people) {
 			if(person.getAddress().equals(address)) {
-				return person;
+				addressPeople.add(person);
 			}
 		}
-		return null;
+		return addressPeople;
 	}
 
 }
