@@ -33,14 +33,17 @@ public class FireStationService {
 		return fireStations;
 	}
 	
+	// Find FireStation by address
 	public FireStation findFireStationById(String address) {
 		return fireStationRepository.findByAddress(address);
 	}
 	
+	// Find FireStation by stationNumber
 	public FireStation findFireStationByStationNumber(String stationNumber) {
 		return fireStationRepository.findByStation(stationNumber);
 	}
 	
+	// Add or Update total list of FireStations
 	public void addOrUpdateFireStations(FireStation fireStation) throws DuplicateFireStationException {
 		FireStation existingFireStation = findFireStationById(fireStation.getAddress());
 		
